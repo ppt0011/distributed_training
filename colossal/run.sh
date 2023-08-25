@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,2 colossalai run --nproc_per_node 2 colossal_train.py -c ./ckpt-fp16 -p torch_ddp_fp16
