@@ -106,7 +106,7 @@ def add_argument():
     )
     parser.add_argument(
         '--dtype',
-        default='fp16',
+        default='bf16',
         type=str,
         choices=['bf16', 'fp16', 'fp32'],
         help=
@@ -253,6 +253,5 @@ if __name__ == '__main__':
     num_epochs = 5
     for epoch in range(start_epoch, num_epochs):
         train_epoch(epoch, num_epochs, model, criterion, trainloader, local_device, model_engine, target_dtype)
-
 
 
